@@ -13,3 +13,5 @@ let primeiroParagrafo =
 //Selecionando todos os parágrafos dentro do div
 let paragrafosDentroDiv =
     document.querySelectorAll('#meuDiv p');
+
+//fim do exemplo
