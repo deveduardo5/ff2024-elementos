@@ -1,0 +1,1 @@
+// 2. Crie dois inputs de tipo número e ao clicar no botão "Somar" imprima os números informados e a soma desses valores num elemento "p" no formato "1+2=3".
