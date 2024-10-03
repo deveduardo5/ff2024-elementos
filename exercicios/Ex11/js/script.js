@@ -2,15 +2,25 @@
 // Peça para digitar M- matutino, V- Vespertino ou N- Noturno. 
 // Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso digitado.
 
-function calcularResultado() {
-    let nome = document.querySelector('#nome').value;
-    let valoHora = parseFloat(document.querySelector('#valorHora').value);
-    let quantHora = parseFloat(document.querySelector('#quantHora').value);
+function exibirCumprimento() {
+    let turno = document.querySelector('#turno').value;
 
-    let resultado = valoHora * quantHora;
-
-    document.querySelector("#resultado").innerHTML =
-        `O valor recebido do trabalhador ${nome} é R$ ${resultado.toFixed(2)}`;
+    switch (turno) {
+        case "M":
+            document.querySelector('section>h2').innerHTML="Bom dia!"
+            break;
+        case "V":
+            document.querySelector('section>h2').innerHTML="Boa tarde!"
+            break;
+        case "N":
+            document.querySelector('section>h2').innerHTML="Boa noite!"
+            break;
+        default:
+            document.querySelector('section>h2').innerHTML="Opção Inválida"
+            break;
+    }
 }
 
-document.querySelector('.btn').addEventListener('click',calcularResultado);
+document
+    .querySelector('.btn')
+    .addEventListener('click',exibirCumprimento);
