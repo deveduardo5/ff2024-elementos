@@ -1,5 +1,6 @@
-// Faça um algoritmo que pergunte o nome do usuário, o quanto ganha por hora e o número de horas
-// trabalhadas no mês. Calcule o resultado e mostre o nome e o total da renda recebida no mês.
+// Faça um algoritmo que pergunte em que turno o usuário estuda. 
+// Peça para digitar M- matutino, V- Vespertino ou N- Noturno. 
+// Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso digitado.
 
 function calcularResultado() {
     let nome = document.querySelector('#nome').value;
