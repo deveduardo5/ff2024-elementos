@@ -1,15 +1,22 @@
-// Faça um algoritmo que pergunte o nome do usuário, o quanto ganha por hora e o número de horas
-// trabalhadas no mês. Calcule o resultado e mostre o nome e o total da renda recebida no mês.
+// Faça um algoritmo em que valida se pode entrar na montanha russa ou não, os critérios são:
+// 1. Ter 1,70 de altura.
+// 2. Ter mínimo de 1,60 de altura e ser maior de 18 anos.
 
-function calcularResultado() {
-    let nome = document.querySelector('#nome').value;
-    let valoHora = parseFloat(document.querySelector('#valorHora').value);
-    let quantHora = parseFloat(document.querySelector('#quantHora').value);
+function verificarEntrada() {
+    let altura = parseFloat(document.querySelector("#altura").value);
+    let idade = parseInt(document.querySelector("#idade").value);
 
-    let resultado = valoHora * quantHora;
+    let resultado = "";
 
-    document.querySelector("#resultado").innerHTML =
-        `O valor recebido do trabalhador ${nome} é R$ ${resultado.toFixed(2)}`;
+    if (altura >= 1.70) {
+        resultado = `Pode ir na montanha russa`;
+    }
+    else if((altura >= 1.60) && (idade >= 18)) {
+        resultado = `Não pode entrar`;
+    }
+
+    document.querySelector("section>h2").innerHTML = resultado;
 }
-
-document.querySelector('.btn').addEventListener('click',calcularResultado);
+document
+.querySelector('button')
+.addEventListener("click", verificarEntrada);
