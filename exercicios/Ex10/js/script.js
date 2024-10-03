@@ -1,15 +1,28 @@
-// Faça um algoritmo que pergunte o nome do usuário, o quanto ganha por hora e o número de horas
-// trabalhadas no mês. Calcule o resultado e mostre o nome e o total da renda recebida no mês.
+// Faça um algoritmo que o usuário escreva o nome e o preço de três produtos e assim que terminar de escrever o ultimo
+// produto, mostre o nome e o valor do produto mais barato.
 
-function calcularResultado() {
+function verificarBarato() {
     let nome = document.querySelector('#nome').value;
-    let valoHora = parseFloat(document.querySelector('#valorHora').value);
-    let quantHora = parseFloat(document.querySelector('#quantHora').value);
+    let valor = parseFloat(document.querySelector('#valor').value);
+    let nome1 = document.querySelector('#nome1').value;
+    let valor1 = parseFloat(document.querySelector('#valor1').value);
+    let nome2 = document.querySelector('#nome2').value;
+    let valor2 = parseFloat(document.querySelector('#valor2').value);
+    
+    let resultado = "";
 
-    let resultado = valoHora * quantHora;
+    let menor = Math.min(nome, nome1, nome2, valor, valor1, valor2);
 
-    document.querySelector("#resultado").innerHTML =
-        `O valor recebido do trabalhador ${nome} é R$ ${resultado.toFixed(2)}`;
+    if ((valor <= valor1) && (valor <= valor1))
+        resultado = ` ${nome}, custa R$ ${valor} é o menor valor!`
+    else if ((valor1 <= valor) && (valor1 <= valor2))
+        resultado = `  ${nome1}, custa R$ ${valor1} é o menor valor!`
+    else
+        resultado = `${nome2}, custa R$ ${valor2} é menor valor!`
+
+    document.querySelector("#resultado").innerHTML = resultado;
 }
 
-document.querySelector('.btn').addEventListener('click',calcularResultado);
+document
+    .querySelector('.btn')
+    .addEventListener('click',verificarBarato);
