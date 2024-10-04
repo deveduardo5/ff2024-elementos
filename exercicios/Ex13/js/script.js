@@ -1,15 +1,21 @@
-// Faça um algoritmo que pergunte o nome do usuário, o quanto ganha por hora e o número de horas
-// trabalhadas no mês. Calcule o resultado e mostre o nome e o total da renda recebida no mês.
+// Faça um algoritmo que faz uma conversão de temperaturas onde . 
+// 1. Converter Celsius para Fahrenheit. formula: (celsius * 9/5) + 32
+// 2. Converter Fahrenheit para Celsius. formula: (fahrenheit - 32) * 5/9
 
-function calcularResultado() {
-    let nome = document.querySelector('#nome').value;
-    let valoHora = parseFloat(document.querySelector('#valorHora').value);
-    let quantHora = parseFloat(document.querySelector('#quantHora').value);
+function exibirResultado() {
+    let temperatura = parseFloat(document.querySelector("#temperatura").value);
+    let op = document.querySelector('#operador').value;
 
-    let resultado = valoHora * quantHora;
-
-    document.querySelector("#resultado").innerHTML =
-        `O valor recebido do trabalhador ${nome} é R$ ${resultado.toFixed(2)}`;
+    switch (op) {
+        case "1":
+            document.querySelector('h2').innerHTML = `A Temperatura em Fahrenheit é ${(temperatura * 9 / 5) + 32}`;
+            break;
+        case "2":
+            document.querySelector('h2').innerHTML = ` A Temperatura em Celsius é ${(temperatura - 32) * 5/9}`;
+            break;
+    }
 }
 
-document.querySelector('.btn').addEventListener('click',calcularResultado);
+document
+    .querySelector('button')
+    .addEventListener('click', exibirResultado);
