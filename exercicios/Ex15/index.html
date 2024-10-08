@@ -5,19 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 15</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
-    <h1>Informe Login e Senha</h1>
-    <input type="text" placeholder="Nome de usuário" id="login"><br />
-    <br/>
-    <input type="password" placeholder="Digite a Senha" id="senha"><br />
-    <br />
+    <section class="container">
+        <div class="row">
+            <h1>Informe Login e Senha</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-4 m-2">
+                <label for="login">Login:</label>
+                <input class="form-control" id="login" type="text" placeholder="Informe o Login...">
+                <br>
+                <label for="senha">Senha:</label>
+                <input class="form-control" id="senha" type="password" placeholder="Informe a Senha...">
+                <br>
+                
+            </div>
+        </div>
 
-    <button class="btn" type="button">Entrar</button>
+        <div class="row">
+            <div class="col-4 m-2">
+                <div class="row">
+                    <div class="d-grid col-12 mx-auto">
+                        <button class="btn btn-primary" type="button">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2></h2>
+        </section>
+    </section>
 
-    <h1 id="resultado"></h1>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
     <script src="js/script.js"></script>
 </body>
 
